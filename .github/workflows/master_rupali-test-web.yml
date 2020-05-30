@@ -32,4 +32,4 @@ jobs:
         app-name: 'rupali-test-web'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d18dac21bd2a494b929f0de303a3e336 }}
-        package: .
+        package: ./build
