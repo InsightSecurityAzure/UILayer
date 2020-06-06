@@ -32,4 +32,4 @@ jobs:
         app-name: 'insightsecurityha'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_c4db5f158eb14bb4b9a9655848b9e12d }}
-        package: .
+        package: ./build
