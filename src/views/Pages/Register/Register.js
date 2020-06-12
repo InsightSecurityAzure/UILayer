@@ -11,42 +11,84 @@ class Register extends Component {
                 <CardBody className="p-4" >
                   <Form>
                     <h1>Agreement</h1>
-                    <p className="text-muted">Create your account</p>
+                    <p className="text-muted">Welcome to Continous Compliance</p>
+                    <Row>
+                    <Col xs="6">
+                      <InputGroup className="mb-3">
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="icon-user"></i>
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input type="text" placeholder="Organization Name" autoComplete="username" />
+                      </InputGroup>
+                      <InputGroup className="mb-3">
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="icon-check"></i>
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input type="text" placeholder="Billing Period" autoComplete="email" />
+                      </InputGroup>
+                     <InputGroup className="mb-3">
+                     <InputGroup className="mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="icon-shield"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="text" placeholder="Device Quota (Linux)" autoComplete="username" />
+                    </InputGroup>
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="icon-calendar"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="text" placeholder="Subscription Tenure" autoComplete="username" />
+                    </InputGroup>
+                    </Col>
+
+                    <Col xs="6">
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
                           <i className="icon-user"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="text" placeholder="Username" autoComplete="username" />
-                    </InputGroup>
-                    <InputGroup className="mb-3">
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>@</InputGroupText>
-                      </InputGroupAddon>
-                      <Input type="text" placeholder="Email" autoComplete="email" />
+                      <Input type="text" placeholder="Agreement Name" autoComplete="username" />
                     </InputGroup>
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="icon-lock"></i>
+                          <i className="icon-shield"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="password" placeholder="Password" autoComplete="new-password" />
+                      <Input type="text" placeholder="Device Quota (Android)" autoComplete="username" />
                     </InputGroup>
-                    <InputGroup className="mb-4">
+                    <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="icon-lock"></i>
+                          <i className="icon-shield"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="password" placeholder="Repeat password" autoComplete="new-password" />
+                      <Input type="text" placeholder="Device Quota (Windows)" autoComplete="username" />
                     </InputGroup>
-                    <Button color="success" block>Create Account</Button>
+                    <InputGroup className="mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="icon-tag"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="password" placeholder="Currency" autoComplete="new-password" />
+                    </InputGroup>
+                    </Col>
+                    </Row>
                   </Form>
                 </CardBody>               
               </Card>
             </Col>
+            
+            <Button color="success" block>Accept Agreement</Button>
           </Row>
         </Container>
     );
