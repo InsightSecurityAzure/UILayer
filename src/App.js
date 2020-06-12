@@ -24,7 +24,8 @@ class App extends Component {
       <React.Suspense fallback={loading()}>
         <Switch>
           <Route path="/" name="Home" render={(props) => (
-              this.isAuthenticated() ? <DefaultLayout {...props}/> : <Login {...props}/>
+              //this.isAuthenticated() ? <DefaultLayout {...props}/> : <Login {...props}/>
+              <DefaultLayout {...props}/>
           )} />
         </Switch>
       </React.Suspense>
