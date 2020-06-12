@@ -26,8 +26,7 @@ class App extends Component {
         <Switch>
           <Route path="/" name="Home" render={(props) => (
               //this.isAuthenticated() ? <DefaultLayout {...props}/> : <Login {...props}/>
-              <ListGroup {...props}/>
-              
+              this.isAuthenticated() ? <ListGroup {...props}/> : <Login {...props}/>   
           )} />
         </Switch>
       </React.Suspense>
