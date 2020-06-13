@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
-
 class Register extends Component {
   render() {
     return (
@@ -79,7 +78,11 @@ class Register extends Component {
                           <i className="icon-tag"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="password" placeholder="Currency" autoComplete="new-password" />
+                      <Input type="select" name="ccmonth" id="ccmonth">
+                        <option value="--">-- Select Currency --</option>
+                        <option value="INR">INR</option>
+                        <option value="USD">USD</option>
+                       </Input>
                     </InputGroup>
                     </Col>
                     </Row>
@@ -87,7 +90,6 @@ class Register extends Component {
                 </CardBody>               
               </Card>
             </Col>
-            
             <Button color="success" block>Accept Agreement</Button>
           </Row>
         </Container>
