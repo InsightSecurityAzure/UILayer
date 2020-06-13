@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
+import Register from './views/Pages/Register/Register';
 
 const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
 
@@ -10,7 +11,7 @@ const DefaultLayout = React.lazy(() => import('./containers/DefaultLayout'));
 // Pages
 const Login = React.lazy(() => import('./views/Pages/Login'));
 //const Register = React.lazy(() => import('./views/Pages/Register'));
-const ListGroup = React.lazy(() => import('./views/Base/Registration/RegistrationFlow'));
+const Registration = React.lazy(() => import('./views/Base/Registration/RegistrationFlow'));
 
 
 class App extends Component {
@@ -26,7 +27,8 @@ class App extends Component {
         <Switch>
           <Route path="/" name="Home" render={(props) => (
               //this.isAuthenticated() ? <DefaultLayout {...props}/> : <Login {...props}/>
-              this.isAuthenticated() ? <ListGroup {...props}/> : <Login {...props}/>   
+              //this.isAuthenticated() ? <ListGroup {...props}/> : <Login {...props}/>  
+              <Registration {...props}/> 
           )} />
         </Switch>
       </React.Suspense>
