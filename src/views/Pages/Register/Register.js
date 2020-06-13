@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import { Button, Card, CardBody, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import { FormGroup, Label } from 'reactstrap';
+
 class Register extends Component {
   render() {
     return (
@@ -87,9 +89,18 @@ class Register extends Component {
                     </Col>
                     </Row>
                   </Form>
-                </CardBody>               
+                  
+                </CardBody>   
+                <FormGroup check className="checkbox">
+                        <Input className="form-check-input" type="checkbox" id="checkbox1" name="checkbox1" value="option1" />
+                        <Label check className="form-check-label" htmlFor="checkbox1">
+                          By accepting this we assume you accept these terms and conditions. 
+                          We will require read access to your Mobile Devices and Laptops
+                        </Label>
+            </FormGroup>           
               </Card>
             </Col>
+            
             <Button color="success" block>Accept Agreement</Button>
           </Row>
         </Container>
