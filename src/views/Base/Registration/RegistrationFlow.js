@@ -3,6 +3,7 @@ import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListG
 
 const Register = React.lazy(() => import('../../Pages/Register/Register'));
 const AddDevice = React.lazy(() => import('../../Pages/Device/Device'));
+const AddUser = React.lazy(() => import('../../Pages/AddUser/AddUser'));
 
 class ListGroups extends Component {
 
@@ -50,14 +51,7 @@ class ListGroups extends Component {
                         <AddDevice />
                       </TabPane>
                       <TabPane tabId={2}>
-                         
-                      </TabPane>
-                      <TabPane tabId={3}>
-                        <p>Irure enim occaecat labore sit qui aliquip reprehenderit amet velit. Deserunt ullamco ex elit nostrud ut dolore nisi officia magna
-                          sit occaecat laboris sunt dolor. Nisi eu minim cillum occaecat aute est cupidatat aliqua labore
-                          aute occaecat ea aliquip sunt amet. Aute mollit dolor ut exercitation irure commodo non amet consectetur quis amet culpa. Quis ullamco
-                          nisi amet qui aute irure eu. Magna labore dolor quis ex labore id nostrud deserunt dolor
-                          eiusmod eu pariatur culpa mollit in irure.</p>
+                         <AddUser />
                       </TabPane>
                     </TabContent>
                   </Col>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 import FontAwesome from 'react-fontawesome';
-class AddDevice extends Component {
+class AddUser extends Component {
   render() {
     return (
         <Container>
@@ -10,44 +10,38 @@ class AddDevice extends Component {
               <Card className="mx-0" style={{ border: 'none' }}>
                 <CardBody className="p-4" >
                   <Form>
-                    <h1>Add Device</h1>
-                    <p className="text-muted">Add you device to make it compliant</p>
+                    <h1>Add User</h1>
+                    <p className="text-muted">IAM Access</p>
                     <Row>
                     <Col xs="6">
                       <InputGroup className="mb-3">
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <FontAwesome name="laptop"/>
+                            <i className="icon-user"></i>
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input type="text" placeholder="Device Id" autoComplete="username" />
+                        <Input type="text" placeholder="User Id" autoComplete="username" />
                       </InputGroup>
 
                       <InputGroup className="mb-3">
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <FontAwesome name="cog"/>
+                            <i className="icon-user"></i>
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input type="text" placeholder="IMEI" autoComplete="email" />
+                        <Input type="text" placeholder="First Name" autoComplete="email" />
                       </InputGroup>
                       
                      <InputGroup className="mb-3">
-                     <InputGroup className="mb-3">
+                    
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                            <FontAwesome name="briefcase"/>
+                          <i className="icon-user"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="text" placeholder="Device Type" autoComplete="username" />
+                      <Input type="text" placeholder="Last Name" autoComplete="username" />
                     </InputGroup>
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                            <FontAwesome name="android"/>
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input type="text" placeholder="Device OS" autoComplete="username" />
-                    </InputGroup>
+                   
                     </Col>
 
                     <Col xs="6">
@@ -55,21 +49,21 @@ class AddDevice extends Component {
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="icon-calendar"></i>
+                          <i className="icon-user"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="date" placeholder="Select Date" />
+                      <Input type="text" placeholder="Contact" autoComplete="username" />
                     </InputGroup>
-                    
+
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="icon-shield"></i>
+                          <i className="icon-lock"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="text" placeholder="Device Code" autoComplete="username" />
+                      <Input type="text" placeholder="Role" />
                     </InputGroup>
-                   
+                
                    
                     </Col>
                     </Row>
@@ -78,11 +72,11 @@ class AddDevice extends Component {
               </Card>
             </Col>
             
-            <Button color="success" block>Register Device</Button>
+            <Button color="success" block>Add User</Button>
           </Row>
         </Container>
     );
   }
 }
 
-export default AddDevice;
+export default AddUser;
