@@ -1,66 +1,109 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import { Button, Card, CardBody, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import { FormGroup, Label } from 'reactstrap';
 
 class Register extends Component {
   render() {
     return (
-      <div className="app flex-row align-items-center">
         <Container>
-          <Row className="justify-content-center">
-            <Col md="9" lg="7" xl="6">
-              <Card className="mx-4">
-                <CardBody className="p-4">
+          <Row className="justify-content-top">
+            <Col md="15" lg="13" xl="12">
+              <Card className="mx-0" style={{ border: 'none' }}>
+                <CardBody className="p-4" >
                   <Form>
-                    <h1>Register</h1>
-                    <p className="text-muted">Create your account</p>
+                    <h1>Agreement</h1>
+                    <p className="text-muted">Welcome to Continous Compliance</p>
+                    <Row>
+                    <Col xs="6">
+                      <InputGroup className="mb-3">
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="icon-user"></i>
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input type="text" placeholder="Organization Name" autoComplete="username" />
+                      </InputGroup>
+                      <InputGroup className="mb-3">
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="icon-check"></i>
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input type="text" placeholder="Billing Period" autoComplete="email" />
+                      </InputGroup>
+                     <InputGroup className="mb-3">
+                     <InputGroup className="mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="icon-shield"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="text" placeholder="Device Quota (Linux)" autoComplete="username" />
+                    </InputGroup>
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="icon-calendar"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="text" placeholder="Subscription Tenure" autoComplete="username" />
+                    </InputGroup>
+                    </Col>
+
+                    <Col xs="6">
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
                           <i className="icon-user"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="text" placeholder="Username" autoComplete="username" />
-                    </InputGroup>
-                    <InputGroup className="mb-3">
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>@</InputGroupText>
-                      </InputGroupAddon>
-                      <Input type="text" placeholder="Email" autoComplete="email" />
+                      <Input type="text" placeholder="Agreement Name" autoComplete="username" />
                     </InputGroup>
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="icon-lock"></i>
+                          <i className="icon-shield"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="password" placeholder="Password" autoComplete="new-password" />
+                      <Input type="text" placeholder="Device Quota (Android)" autoComplete="username" />
                     </InputGroup>
-                    <InputGroup className="mb-4">
+                    <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="icon-lock"></i>
+                          <i className="icon-shield"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="password" placeholder="Repeat password" autoComplete="new-password" />
+                      <Input type="text" placeholder="Device Quota (Windows)" autoComplete="username" />
                     </InputGroup>
-                    <Button color="success" block>Create Account</Button>
+                    <InputGroup className="mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="icon-tag"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="select" name="ccmonth" id="ccmonth">
+                        <option value="--">-- Select Currency --</option>
+                        <option value="INR">INR</option>
+                        <option value="USD">USD</option>
+                       </Input>
+                    </InputGroup>
+                    </Col>
+                    </Row>
                   </Form>
-                </CardBody>
-                <CardFooter className="p-4">
-                  <Row>
-                    <Col xs="12" sm="6">
-                      <Button className="btn-facebook mb-1" block><span>facebook</span></Button>
-                    </Col>
-                    <Col xs="12" sm="6">
-                      <Button className="btn-twitter mb-1" block><span>twitter</span></Button>
-                    </Col>
-                  </Row>
-                </CardFooter>
+                  
+                </CardBody>   
+                <FormGroup check className="checkbox">
+                        <Input className="form-check-input" type="checkbox" id="checkbox1" name="checkbox1" value="option1" />
+                        <Label check className="form-check-label" htmlFor="checkbox1">
+                          By accepting this we assume you accept these terms and conditions. 
+                          We will require read access to your Mobile Devices and Laptops
+                        </Label>
+            </FormGroup>           
               </Card>
             </Col>
+            
+            <Button color="success" block>Accept Agreement</Button>
           </Row>
         </Container>
-      </div>
     );
   }
 }
